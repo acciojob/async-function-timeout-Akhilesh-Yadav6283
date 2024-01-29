@@ -1,4 +1,4 @@
-document.getElementById("btn");.addEventListener("click",async () => {
+document.getElementById("btn").addEventListener("click",async () => {
 	let text = document.getElementById("text").value;
 	let delay = document.getElementById("delay").value;
 	
@@ -7,7 +7,7 @@ document.getElementById("btn");.addEventListener("click",async () => {
 			setTimeout(() => {
 				resolve(text);
 			}, delay);
-		})
+		});
 		
         let text2 = await promise;
 		if(text2){
