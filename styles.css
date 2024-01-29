@@ -1,1 +1,19 @@
-/*  your css code here. If applicable */
+document.getElementById("btn");.addEventListener("click",async () => {
+	let text = document.getElementById("text").value;
+	let delay = document.getElementById("delay").value;
+	
+	if(text && delay){
+		let promise = new Promise( (resolve) => {
+			setTimeout(() => {
+				resolve(text);
+			}, delay);
+		})
+		
+        let text2 = await promise;
+		if(text2){
+			document.getElementById("output").textContent = text2;
+		}
+		
+		
+	}
+})
